@@ -275,6 +275,10 @@ def get_submissions():
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+@app.route('/healthz')
+def health_check():
+    return 'OK', 200
+
 @app.route('/verifyToken', methods=['GET'])
 @jwt_required()
 def verify_token():
