@@ -73,7 +73,7 @@
       const username = localStorage.getItem('username');
 
       try {
-        const response = await fetch(`http://127.0.0.1:5000/getQuiz?course=${encodeURIComponent(courseName)}`);
+        const response = await fetch(`https://testmonit0ro25.onrender.com/getQuiz?course=${encodeURIComponent(courseName)}`);
         if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
         
         const quizData = await response.json();
@@ -189,7 +189,7 @@
               quiz_name: courseName,
               score: score,
             };
-            const submitResponse = await fetch('http://127.0.0.1:5000/submitQuiz', {
+            const submitResponse = await fetch('https://testmonit0ro25.onrender.com/submitQuiz', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify(submission),
