@@ -86,7 +86,7 @@ class AntiCheat {
         };
 
         try {
-            await fetch('http://127.0.0.1:5000/reportCheating', {
+            await fetch('https://testmonit0ro25.onrender.com/reportCheating', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(incidentData)
