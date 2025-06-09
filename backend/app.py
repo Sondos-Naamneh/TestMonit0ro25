@@ -113,6 +113,9 @@ def signup():
         return "signup_failed_db_error", 500
 
     return "success" # Keep this consistent
+@app.route('/')
+def home():
+    return "Backend is working!"
 
 @app.route('/getQuiz', methods=['GET'])
 def get_quiz():
